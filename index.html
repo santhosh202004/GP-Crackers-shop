@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,34 +16,33 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="assets/css/home.css">
 </head>
+
 <body>
 
   <!-- ============================
        Navbar Start
        ============================ -->
-  <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-3">
+  <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-transparent">
     <div class="container">
 
       <!-- Logo -->
       <a class="navbar-brand" href="#">
-        <img src="assets/images/logo_bg_removed.png" alt="GP Crackers" height="50">
+        <img src="assets/images/logo_bg_removed.png" alt="GP Crackers" class="nav-logo">
       </a>
 
       <!-- Mobile Toggle -->
-      <button class="navbar-toggler" type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarMenu"
-        aria-controls="navbarMenu"
-        aria-expanded="false"
-        aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+      <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu"
+        aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="toggler-icon"></span>
+        <span class="toggler-icon"></span>
+        <span class="toggler-icon"></span>
       </button>
 
       <!-- Menu -->
       <div class="collapse navbar-collapse justify-content-end" id="navbarMenu">
-        <ul class="navbar-nav align-items-center">
+        <ul class="navbar-nav align-items-center gap-1">
           <li class="nav-item">
-            <a class="nav-link active" href="#">Home</a>
+            <a class="nav-link nav-active" href="#">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">About Us</a>
@@ -50,8 +50,8 @@
           <li class="nav-item">
             <a class="nav-link" href="#">Products</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact Us</a>
+          <li class="nav-item ms-2">
+            <a class="nav-link" href="#contact">Contact Us</a>
           </li>
         </ul>
       </div>
@@ -62,36 +62,67 @@
 
 
   <!-- ============================
-       Banner Slider Start
+       Hero Section Start
        ============================ -->
-  <div id="bannerSlider" class="carousel slide" data-bs-ride="carousel">
 
-    <div class="carousel-inner">
+  <section class="hero-section" id="home">
 
-      <!-- Slide 1 -->
-      <div class="carousel-item active">
-        <img src="./assets/images/banner1.jpg" class="d-block w-100 banner-img" alt="GP Crackers Banner 1">
+    <!-- Animated particle canvas -->
+    <canvas id="heroCanvas"></canvas>
+
+    <!-- Floating firework orbs -->
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+    <div class="hero-orb hero-orb-3"></div>
+
+    <!-- Content -->
+    <div class="container hero-content">
+
+  
+
+      <h1 class="hero-title">
+        Celebrate with
+        <span class="hero-title-gradient">GP Crackers</span>
+      </h1>
+
+      <p class="hero-typing-wrap">
+        <span class="hero-cursor-prefix">✦&nbsp;</span>
+        <span id="typing-text"></span><span class="hero-cursor">|</span>
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#products" class="btn hero-btn-primary">
+          <i class="bi bi-fire me-2"></i>Explore Products
+        </a>
+        <a href="#contact" class="btn hero-btn-outline">
+          <i class="bi bi-telephone me-2"></i>Contact Us
+        </a>
       </div>
 
-      <!-- Slide 2 -->
-      <div class="carousel-item">
-        <img src="./assets/images/banner2.jpg" class="d-block w-100 banner-img" alt="GP Crackers Banner 2">
+      <!-- Stats Row -->
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="hero-stat-num">500+</span>
+          <span class="hero-stat-label">Products</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">10K+</span>
+          <span class="hero-stat-label">Happy Customers</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">15+</span>
+          <span class="hero-stat-label">Years Experience</span>
+        </div>
       </div>
 
     </div>
 
-    <!-- Left Button -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#bannerSlider" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
-    </button>
+    
 
-    <!-- Right Button -->
-    <button class="carousel-control-next" type="button" data-bs-target="#bannerSlider" data-bs-slide="next">
-      <span class="carousel-control-next-icon"></span>
-    </button>
-
-  </div>
-  <!-- Banner Slider End -->
+  </section>
+  <!-- Hero Section End -->
 
 
   <!-- ============================
@@ -101,8 +132,9 @@
     <div class="container">
 
       <!-- Section Title -->
-      <div class="text-center mb-5">
-        <h2 class="products-title">Our Products</h2>
+      <div class="section-title text-center mb-5">
+        <h2 class="text-uppercase fw-bold text-dark mb-2">Our Products</h2>
+        <div class="title-underline"></div>
       </div>
 
       <div class="row g-4">
@@ -134,7 +166,8 @@
         <!-- Product 4 -->
         <div class="col-lg-3 col-md-6 col-12">
           <div class="product-card text-center">
-            <img src="./assets/images/products/Ground-Chakara-Big-1-scaled.jpg" class="img-fluid product-img" alt="Ground Chakkar">
+            <img src="./assets/images/products/Ground-Chakara-Big-1-scaled.jpg" class="img-fluid product-img"
+              alt="Ground Chakkar">
             <h5 class="product-name mt-3">Ground Chakkar</h5>
           </div>
         </div>
@@ -174,7 +207,8 @@
       </div>
 
       <div class="text-center mt-5">
-        <button class="btn btn-primary py-3 px-4" style="background-color:#043668; border:none; font-family:'Poppins',sans-serif;">
+        <button class="btn btn-primary py-3 px-4"
+          style="background-color:#043668; border:none; font-family:'Poppins',sans-serif;">
           View All Products
         </button>
       </div>
@@ -191,9 +225,10 @@
     <div class="container">
 
       <!-- Section Title -->
-      <div class="text-center mb-5">
-        <h2 class="why-title">Why Choose GP Crackers</h2>
-        <p class="why-subtitle">We provide the best crackers with quality and service you can trust.</p>
+      <div class="section-title text-center mb-5">
+        <h2 class="text-uppercase fw-bold text-dark mb-2">Why Choose GP Crackers</h2>
+        <div class="title-underline"></div>
+        <p class="why-subtitle mt-3">We provide the best crackers with quality and service you can trust.</p>
       </div>
 
       <div class="row g-4">
@@ -245,124 +280,135 @@
       </div>
     </div>
   </section>
-  <!-- Why Choose Us Section End -->
-
-
-  <!-- ============================
-       Customer Reviews Section Start
+  <!-- Why Choose Us Section End -->  <!-- ============================
+       Customer Talks Section Start
        ============================ -->
-  <section class="reviews-section py-5">
-    <div class="reviews-bg-overlay"></div>
-
-    <div class="container position-relative">
-
-      <!-- Section Header -->
-      <div class="text-center mb-5">
-        <span class="reviews-badge">💬 Testimonials</span>
-        <h2 class="reviews-title mt-2">What Our Customers Say</h2>
-        <p class="reviews-subtitle">Real experiences from our happy customers across Tamil Nadu</p>
+  <section class="customer-talks py-5 position-relative">
+    <div class="container text-center pt-3 pb-5">
+      
+      <!-- Section Title -->
+      <div class="section-title mb-5">
+        <h2 class="text-uppercase fw-bold text-dark mb-2">Customer Talks</h2>
+        <div class="title-underline"></div>
       </div>
 
-      <!-- Cards Track -->
-      <div class="reviews-track-wrapper">
+      <!-- Carousel -->
+      <div id="customerTalksCarousel" class="carousel slide mt-4" data-bs-ride="carousel" data-bs-interval="3000">
+        
+        <!-- Circle Indicators -->
+        <div class="carousel-indicators custom-indicators">
+          <button type="button" data-bs-target="#customerTalksCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#customerTalksCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#customerTalksCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
 
-        <!-- Prev Button -->
-        <button class="rev-arrow rev-prev" id="revPrev" aria-label="Previous">
-          <i class="bi bi-chevron-left"></i>
-        </button>
+        <div class="carousel-inner">
+          
+          <!-- Slide 1 -->
+          <div class="carousel-item active">
+            <div class="customer-card mx-auto">
+              <!-- Avatar -->
+              <div class="avatar-wrap mx-auto mb-3">
+                <div class="customer-avatar rounded-circle d-flex align-items-center justify-content-center">
+                  <i class="bi bi-person-fill text-white" style="font-size: 3.5rem; margin-top: -10px;"></i>
+                </div>
+              </div>
 
-        <div class="reviews-track" id="reviewsTrack">
+              <!-- Name & Location -->
+              <h5 class="customer-name fw-bold mb-1">Santhosh</h5>
+              <p class="customer-location text-muted small mb-2">Chennai</p>
+              
+              <!-- Rating Stars -->
+              <div class="rating mb-3">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
 
-          <!-- Card 1 -->
-          <div class="rev-card">
-            <div class="rev-quote"><i class="bi bi-quote"></i></div>
-            <div class="rev-stars">★★★★★</div>
-            <p class="rev-text">"Best quality crackers and safe packaging. My whole family absolutely loved it! Will definitely order again this Diwali."</p>
-            <div class="rev-author">
-              <div class="rev-avatar" style="background: linear-gradient(135deg,#ffba00,#ff6b00);">AK</div>
-              <div class="rev-info">
-                <strong>Arun Kumar</strong>
-                <span><i class="bi bi-geo-alt-fill"></i> Madurai</span>
+              <!-- Content/Quote -->
+              <div class="quote-text fst-italic position-relative mt-2">
+                <span class="quote-icon quote-left">“</span>
+                I've been happily buying crackers here for years. Their professional service, excellent packaging, thorough domain knowledge and quick turnaround are the key factors that made me opt for them. Highly recommended!
+                <span class="quote-icon quote-right">”</span>
               </div>
             </div>
           </div>
 
-          <!-- Card 2 -->
-          <div class="rev-card">
-            <div class="rev-quote"><i class="bi bi-quote"></i></div>
-            <div class="rev-stars">★★★★★</div>
-            <p class="rev-text">"Very affordable price and super fast delivery service. Received within the promised time. Highly satisfied with the order!"</p>
-            <div class="rev-author">
-              <div class="rev-avatar" style="background: linear-gradient(135deg,#043668,#0a7cf7);">PR</div>
-              <div class="rev-info">
-                <strong>Priya Rajan</strong>
-                <span><i class="bi bi-geo-alt-fill"></i> Chennai</span>
+          <!-- Slide 2 -->
+          <div class="carousel-item">
+            <div class="customer-card mx-auto">
+              <div class="avatar-wrap mx-auto mb-3">
+                <div class="customer-avatar rounded-circle d-flex align-items-center justify-content-center">
+                  <i class="bi bi-person-fill text-white" style="font-size: 3.5rem; margin-top: -10px;"></i>
+                </div>
+              </div>
+
+              <h5 class="customer-name fw-bold mb-1">Karthik R</h5>
+              <p class="customer-location text-muted small mb-2">Madurai</p>
+              
+              <div class="rating mb-3">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+
+              <div class="quote-text fst-italic position-relative mt-2">
+                <span class="quote-icon quote-left">“</span>
+                Outstanding experience every Diwali! The quality of the products and the incredibly safe delivery mechanism makes GP Crackers the best option in the entire state. The kids loved the new varieties this year.
+                <span class="quote-icon quote-right">”</span>
               </div>
             </div>
           </div>
 
-          <!-- Card 3 -->
-          <div class="rev-card">
-            <div class="rev-quote"><i class="bi bi-quote"></i></div>
-            <div class="rev-stars">★★★★★</div>
-            <p class="rev-text">"Wide range of crackers available at really great prices. The packaging was excellent and everything arrived in perfect condition!"</p>
-            <div class="rev-author">
-              <div class="rev-avatar" style="background: linear-gradient(135deg,#e63946,#c1121f);">RV</div>
-              <div class="rev-info">
-                <strong>Rajesh V</strong>
-                <span><i class="bi bi-geo-alt-fill"></i> Coimbatore</span>
+          <!-- Slide 3 -->
+          <div class="carousel-item">
+            <div class="customer-card mx-auto">
+              <div class="avatar-wrap mx-auto mb-3">
+                <div class="customer-avatar rounded-circle d-flex align-items-center justify-content-center">
+                  <i class="bi bi-person-fill text-white" style="font-size: 3.5rem; margin-top: -10px;"></i>
+                </div>
               </div>
-            </div>
-          </div>
 
-          <!-- Card 4 -->
-          <div class="rev-card">
-            <div class="rev-quote"><i class="bi bi-quote"></i></div>
-            <div class="rev-stars">★★★★★</div>
-            <p class="rev-text">"Excellent customer support team and very safe, quality products. GP Crackers is my go-to shop every festival season!"</p>
-            <div class="rev-author">
-              <div class="rev-avatar" style="background: linear-gradient(135deg,#2d6a4f,#40916c);">SM</div>
-              <div class="rev-info">
-                <strong>Suresh M</strong>
-                <span><i class="bi bi-geo-alt-fill"></i> Salem</span>
+              <h5 class="customer-name fw-bold mb-1">Nithya S</h5>
+              <p class="customer-location text-muted small mb-2">Coimbatore</p>
+              
+              <div class="rating mb-3">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
               </div>
-            </div>
-          </div>
 
-          <!-- Card 5 -->
-          <div class="rev-card">
-            <div class="rev-quote"><i class="bi bi-quote"></i></div>
-            <div class="rev-stars">★★★★★</div>
-            <p class="rev-text">"Ordered for my son's birthday and the sparklers were a huge hit! Great quality at unbeatable prices. Thank you GP Crackers!"</p>
-            <div class="rev-author">
-              <div class="rev-avatar" style="background: linear-gradient(135deg,#7b2d8b,#c77dff);">KS</div>
-              <div class="rev-info">
-                <strong>Kavitha S</strong>
-                <span><i class="bi bi-geo-alt-fill"></i> Trichy</span>
+              <div class="quote-text fst-italic position-relative mt-2">
+                <span class="quote-icon quote-left">“</span>
+                Great collection and unbeatable prices. I am genuinely impressed with their 24/7 customer support team. They are incredibly responsive and resolved my queries almost instantly. Highly trustworthy platform!
+                <span class="quote-icon quote-right">”</span>
               </div>
             </div>
           </div>
 
         </div>
 
-        <!-- Next Button -->
-        <button class="rev-arrow rev-next" id="revNext" aria-label="Next">
-          <i class="bi bi-chevron-right"></i>
+        <!-- Navigation Buttons -->
+        <!-- These are visually subtle as mostly users interact via indicators or it auto-slides -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#customerTalksCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon d-none d-md-inline-block" aria-hidden="true" style="filter: invert(1) grayscale(100); opacity: 0.5;"></span>
+          <span class="visually-hidden">Previous</span>
         </button>
-
+        <button class="carousel-control-next" type="button" data-bs-target="#customerTalksCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon d-none d-md-inline-block" aria-hidden="true" style="filter: invert(1) grayscale(100); opacity: 0.5;"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
-
-      <!-- Dot Navigation -->
-      <div class="rev-dots" id="revDots"></div>
 
     </div>
   </section>
-  <!-- Customer Reviews Section End -->
-
-
-  <!-- ============================
-       Footer Start
-       ============================ -->
+  <!-- Customer Talks Section End -->
   <footer class="site-footer">
     <div class="container">
       <div class="row g-4">
@@ -370,7 +416,8 @@
         <!-- Brand -->
         <div class="col-lg-4 col-md-6">
           <img src="assets/images/logo_bg_removed.png" alt="GP Crackers" height="50" class="mb-3">
-          <p>GP Crackers – Your trusted partner for premium quality fireworks. We deliver joy and celebrations right to your doorstep.</p>
+          <p>GP Crackers – Your trusted partner for premium quality fireworks. We deliver joy and celebrations right to
+            your doorstep.</p>
         </div>
 
         <!-- Quick Links -->
@@ -425,21 +472,207 @@
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Sticky Navbar Script -->
+  <!-- Navbar & WhatsApp scroll behaviour -->
   <script>
     window.addEventListener("scroll", function () {
       const navbar = document.getElementById("mainNavbar");
-      const bannerHeight = document.querySelector(".banner-img").offsetHeight;
-      if (window.scrollY > bannerHeight) {
-        navbar.classList.add("navbar-sticky");
+      const whatsapp = document.querySelector(".whatsapp-float");
+
+      // Navbar Glassmorphism
+      if (window.scrollY > 80) {
+        navbar.classList.add("navbar-scrolled");
       } else {
-        navbar.classList.remove("navbar-sticky");
+        navbar.classList.remove("navbar-scrolled");
+      }
+
+      // Hide WhatsApp in hero section (appears after scrolling past 50% of viewport)
+      if (whatsapp) {
+        if (window.scrollY > window.innerHeight * 0.5) {
+          whatsapp.style.opacity = "1";
+          whatsapp.style.visibility = "visible";
+          whatsapp.style.pointerEvents = "auto";
+          whatsapp.style.transform = "scale(1)";
+        } else {
+          whatsapp.style.opacity = "0";
+          whatsapp.style.visibility = "hidden";
+          whatsapp.style.pointerEvents = "none";
+          whatsapp.style.transform = "scale(0.8)";
+        }
       }
     });
+
+    // Trigger scroll event on load to set initial states
+    window.dispatchEvent(new Event('scroll'));
+  </script>
+  <script>
+    /* ── Typing effect ── */
+    const phrases = [
+      "Premium Quality Crackers",
+      "Safe & Certified Fireworks",
+      "Fast Delivery Across Tamil Nadu",
+      "Celebrate Every Occasion"
+    ];
+    let pIndex = 0, cIndex = 0, deleting = false;
+    function typeLoop() {
+      const el = document.getElementById("typing-text");
+      const current = phrases[pIndex];
+      if (!deleting) {
+        el.textContent = current.slice(0, ++cIndex);
+        if (cIndex === current.length) { deleting = true; return setTimeout(typeLoop, 2000); }
+      } else {
+        el.textContent = current.slice(0, --cIndex);
+        if (cIndex === 0) { deleting = false; pIndex = (pIndex + 1) % phrases.length; }
+      }
+      setTimeout(typeLoop, deleting ? 40 : 70);
+    }
+    typeLoop();
+
+    /* ── Hero canvas bursting crackers (Refined) ── */
+    (function () {
+      const canvas = document.getElementById('heroCanvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      let W, H;
+      let fireworks = [];
+      let particles = [];
+
+      function resize() {
+        W = canvas.width = window.innerWidth;
+        H = canvas.height = canvas.offsetHeight;
+      }
+      resize();
+      window.addEventListener('resize', resize);
+
+      function rand(a, b) { return a + Math.random() * (b - a); }
+
+      const COLORS = ['#FFBA00', '#FFD54F', '#FF8F00', '#ff5252', '#4fc3f7', '#69f0ae', '#ffffff'];
+
+      // Firework rocket that flies up
+      class Firework {
+        constructor() {
+          // Burst only in left (5%-25%) or right (75%-95%) corners
+          this.x = Math.random() < 0.5 ? rand(W * 0.05, W * 0.25) : rand(W * 0.75, W * 0.95);
+          this.y = H;
+          this.targetY = rand(H * 0.1, H * 0.3); // Burst high up
+          this.speed = rand(3, 5); // Slower ascent
+          this.color = COLORS[Math.floor(rand(0, COLORS.length))];
+          this.radius = 2;
+          this.angle = Math.atan2(this.targetY - this.y, this.x - this.x);
+          this.vx = Math.cos(this.angle) * this.speed + rand(-0.5, 0.5);
+          this.vy = -Math.sin(this.angle) * this.speed;
+          this.trail = [];
+          this.dead = false;
+        }
+        update() {
+          this.trail.push({ x: this.x, y: this.y });
+          if (this.trail.length > 8) this.trail.shift();
+
+          this.x += this.vx;
+          this.y += this.vy;
+          this.vy += 0.015; // Lighter gravity for slower feel
+
+          if (this.y <= this.targetY || this.vy >= 0) {
+            this.dead = true;
+            createBurst(this.x, this.y, this.color);
+          }
+        }
+        draw() {
+          ctx.beginPath();
+          ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+          ctx.fillStyle = this.color;
+          ctx.fill();
+
+          if (this.trail.length > 0) {
+            ctx.beginPath();
+            ctx.moveTo(this.trail[0].x, this.trail[0].y);
+            for (let i = 1; i < this.trail.length; i++) {
+              ctx.lineTo(this.trail[i].x, this.trail[i].y);
+            }
+            ctx.strokeStyle = this.color;
+            ctx.lineWidth = 1.5;
+            ctx.stroke();
+          }
+        }
+      }
+
+      // Explosion particles
+      class Particle {
+        constructor(x, y, color) {
+          this.x = x;
+          this.y = y;
+          const angle = rand(0, Math.PI * 2);
+          const velocity = rand(1, 4.5); // Slower burst expansion
+          this.vx = Math.cos(angle) * velocity;
+          this.vy = Math.sin(angle) * velocity;
+          this.friction = 0.96; // Less friction to keep them moving smoothly
+          this.gravity = 0.04; // Less gravity so they float down gracefully
+          this.color = color;
+          // 20% chance of random spark color instead of main color
+          if (Math.random() < 0.2) {
+            this.color = COLORS[Math.floor(rand(0, COLORS.length))];
+          }
+          this.alpha = 1;
+          this.decay = rand(0.008, 0.018); // Slower fade out
+          this.size = rand(1, 2.5);
+        }
+        update() {
+          this.vx *= this.friction;
+          this.vy *= this.friction;
+          this.vy += this.gravity;
+          this.x += this.vx;
+          this.y += this.vy;
+          this.alpha -= this.decay;
+        }
+        draw() {
+          ctx.globalAlpha = this.alpha;
+          ctx.beginPath();
+          ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+          ctx.fillStyle = this.color;
+          ctx.fill();
+          ctx.globalAlpha = 1;
+        }
+      }
+
+      function createBurst(x, y, color) {
+        const particleCount = Math.floor(rand(40, 80));
+        for (let i = 0; i < particleCount; i++) {
+          particles.push(new Particle(x, y, color));
+        }
+      }
+
+      function loop() {
+        // Clear canvas completely to avoid changing the UI bg color
+        ctx.clearRect(0, 0, W, H);
+
+        // Keep maximum of 2 rockets at a time, launching less frequently
+        if (Math.random() < 0.02 && fireworks.length < 2) {
+          fireworks.push(new Firework());
+        }
+
+        for (let i = fireworks.length - 1; i >= 0; i--) {
+          fireworks[i].update();
+          fireworks[i].draw();
+          if (fireworks[i].dead) {
+            fireworks.splice(i, 1);
+          }
+        }
+
+        for (let i = particles.length - 1; i >= 0; i--) {
+          particles[i].update();
+          particles[i].draw();
+          if (particles[i].alpha <= 0) {
+            particles.splice(i, 1);
+          }
+        }
+
+        requestAnimationFrame(loop);
+      }
+
+      loop();
+    })();
   </script>
 
-  <!-- Customer Review Slider (external JS) -->
-  <script src="assets/js/customer_review.js"></script>
 
 </body>
+
 </html>
