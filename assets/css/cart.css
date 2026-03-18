@@ -1,0 +1,217 @@
+/* =========================================
+   Cart Page CSS
+   ========================================= */
+
+.cart-hero {
+    background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy-mid) 100%);
+    padding: 120px 0 60px;
+    text-align: center;
+    color: #fff;
+}
+
+.cart-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    color: var(--white);
+    margin-bottom: 10px;
+}
+
+.cart-subtitle {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: 'Poppins', sans-serif;
+}
+
+.cart-section {
+    padding: 60px 0 100px;
+    background-color: #f8f9fa;
+    min-height: 40vh;
+}
+
+/* Cart Table Styling */
+.cart-table-wrapper {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.table-cart {
+    margin-bottom: 0;
+    vertical-align: middle;
+}
+
+.table-cart thead {
+    background-color: var(--navy-dark);
+    color: #fff;
+}
+
+.table-cart th {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    padding: 15px 20px;
+    border-bottom: none;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+.table-cart td {
+    padding: 20px;
+    border-color: #f0f0f0;
+}
+
+.cart-item-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.cart-item-name {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: var(--navy-dark);
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.cart-item-price, .cart-item-total {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #555;
+}
+
+.cart-item-total {
+    color: var(--gold-warm);
+    font-size: 1.1rem;
+}
+
+/* Quantity Input Styling */
+.qty-input-group {
+    width: 120px;
+    margin: 0 auto;
+}
+
+.qty-input-group .btn {
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    color: #333;
+    font-weight: bold;
+    padding: 5px 12px;
+}
+
+.qty-input-group .btn:hover {
+    background-color: #e2e2e2;
+}
+
+.qty-input-group input {
+    text-align: center;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    border-left: none;
+    border-right: none;
+    font-weight: 600;
+}
+
+.qty-input-group input:focus {
+    box-shadow: none;
+}
+
+/* Remove button */
+.btn-remove {
+    color: #dc3545;
+    background: rgba(220, 53, 69, 0.1);
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.btn-remove:hover {
+    background: #dc3545;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+/* Cart Summary Styling */
+.cart-summary {
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    border-top: 4px solid var(--gold);
+}
+
+.cart-summary h4 {
+    font-family: 'Poppins', sans-serif;
+    color: var(--navy-dark);
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    color: #555;
+    font-size: 1.05rem;
+}
+
+.summary-total {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px dashed #ddd;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: var(--navy-dark);
+    font-size: 1.3rem;
+}
+
+.btn-checkout {
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-warm) 100%);
+    color: var(--navy-dark);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 15px;
+    border-radius: 50px;
+    border: none;
+    width: 100%;
+    margin-top: 25px;
+    box-shadow: 0 6px 20px rgba(255, 186, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-checkout:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 186, 0, 0.5);
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-warm) 100%);
+}
+
+.empty-cart-msg {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.empty-cart-icon {
+    font-size: 4rem;
+    color: #ddd;
+    margin-bottom: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .table-responsive {
+        border: none;
+    }
+}
